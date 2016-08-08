@@ -53,6 +53,9 @@ public enum IQAutoToolbarManageBehaviour : Int {
     case ByPosition
 }
 
+public let IQKeyboardManagerWillMoveRootFrameFromOriginNotification = "IQKeyboardManagerWillMoveRootFrameFromOriginNotification"
+public let IQKeyboardManagerWillReturnRootFrameToOriginNotification = "IQKeyboardManagerWillReturnRootFrameToOriginNotification"
+
 /*
 
 /---------------------------------------------------------------------------------------------------\
