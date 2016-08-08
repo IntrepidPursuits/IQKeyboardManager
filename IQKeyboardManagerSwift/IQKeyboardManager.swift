@@ -764,6 +764,9 @@ public class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
  
                 
                 }) { (animated:Bool) -> Void in}
+            
+            let notification = frame.origin.y == 0 ? IQKeyboardManagerWillReturnRootFrameToOriginNotification : IQKeyboardManagerWillMoveRootFrameFromOriginNotification
+            NSNotificationCenter.defaultCenter().postNotification(NSNotification(name: notification, object: nil))
         } else {  //  If can't get rootViewController then printing warning to user.
             _IQShowLog("You must set UIWindow.rootViewController in your AppDelegate to work with IQKeyboardManager")
         }
